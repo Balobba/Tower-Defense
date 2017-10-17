@@ -54,19 +54,19 @@ public class Tower implements Cloneable{
     /**
      * Lightning tower icon
      */
-    public static final Tower LIGHTNING_TOWER = TowerLightning(0, 10, 2, 1, 200, "LightningTower");
+    public static final Tower LIGHTNING_TOWER = new TowerLightning(0, 10, 2, 1, 200, "LightningTower");
     /**
      * Arrow tower icon
      */
-    public static final Tower ARROW_TOWER = TowerLightning(1, 25, 4, 2, 100,"ArrowTower");
+    public static final Tower ARROW_TOWER = new TowerLightning(1, 25, 4, 2, 100,"ArrowTower");
     /**
      * Fire tower icon
      */
-    public static final Tower FIRE_TOWER = TowerLightning(2, 30, 3, 20, 200, "FireTower");
+    public static final Tower FIRE_TOWER = new TowerLightning(2, 30, 3, 20, 200, "FireTower");
     /**
      * Arcane tower icon
      */
-    public static final Tower ARCANE_TOWER = TowerLightning(3, 150, 1, 50, 750, "ArcaneTower");
+    public static final Tower ARCANE_TOWER = new TowerLightning(3, 150, 1, 50, 750, "ArcaneTower");
 
     Tower(int id, int cost, int range, int damage, int maxAttackDelay, String texture) {
 
