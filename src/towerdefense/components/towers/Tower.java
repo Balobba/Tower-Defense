@@ -52,23 +52,23 @@ public class Tower implements Cloneable{
      */
 
     /**
-     * Lightning tower
+     * Lightning tower icon
      */
-    public static final Tower LIGHTNING_TOWER = new TowerLightning(0, 10, 2, 1, 200).getTextureFile("LightningTower");
+    TowerLightning(0, 10, 2, 1, 200, "LightningTower");
     /**
-     * Arrow tower
+     * Arrow tower icon
      */
-    public static final Tower ARROW_TOWER = new TowerLightning(1, 25, 4, 2, 100).getTextureFile("ArrowTower");
+    TowerLightning(1, 25, 4, 2, 100,"ArrowTower");
     /**
-     * Fire tower
+     * Fire tower icon
      */
-    public static final Tower FIRE_TOWER = new TowerLightning(2, 30, 3, 20, 200).getTextureFile("FireTower");
+    TowerLightning(2, 30, 3, 20, 200, "FireTower");
     /**
-     * Arcane tower
+     * Arcane tower icon
      */
-    public static final Tower ARCANE_TOWER = new TowerLightning(3, 150, 1, 50, 750).getTextureFile("ArcaneTower");
+    TowerLightning(3, 150, 1, 50, 750, "ArcaneTower");
 
-    Tower(int id, int cost, int range, int damage, int maxAttackDelay) {
+    Tower(int id, int cost, int range, int damage, int maxAttackDelay, String texture) {
 
         if (TOWER_LIST[id] != null) {
 
@@ -82,6 +82,7 @@ public class Tower implements Cloneable{
             this.range = range;
             this.damage = damage;
             this.maxAttackDelay = maxAttackDelay;
+            this.texture = new ImageIcon("res/tower/" + texture + ".png").getImage();
         }
     }
 
@@ -120,11 +121,6 @@ public class Tower implements Cloneable{
         return null;
     }
 
-    Tower getTextureFile(String str) {
-        this.texture = new ImageIcon("res/tower/" + str + ".png").getImage();
-
-        return null;
-    }
 
     public Image getTexture() {
         return texture;
