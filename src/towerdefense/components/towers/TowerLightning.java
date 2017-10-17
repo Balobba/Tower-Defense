@@ -6,8 +6,8 @@ package towerdefense.components.towers;
 public class TowerLightning extends Tower {
 
 
-    public TowerLightning(int id, int cost, int range, int damage, int maxAttackDelay) {
-        super(id, cost, range, damage, maxAttackDelay);
+    public TowerLightning(int id, int cost, int range, int damage, int maxAttackDelay, String texture) {
+        super(id, cost, range, damage, maxAttackDelay, texture);
 
     }
 }
